@@ -1,0 +1,126 @@
+body {
+	background-color: gray;
+	font-family: Arial, sans-serif;
+	margin: 0px;
+	padding: 0px;
+}
+
+div {
+	border-radius: 5px;
+	border: solid 2px black;
+}
+
+#splashScreen {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+#gameWindow {
+	margin: 10px;
+	padding: 10px;
+	width: 600px;
+	height: 400px;
+}
+
+#topBanner {
+	width: auto;
+	height: 24px;
+	margin-bottom: 10px;
+	text-align: center;
+	padding-top: 4px;
+}
+
+#content {
+	width: 596px;
+	height: 320px;
+	margin-bottom: 10px;
+	float: left;
+}
+
+#botBanner {
+	width: 596px;
+	height: 20px;
+	text-align: center;
+	font-size: 0.75em;
+	float: left;
+}
+
+#map {
+	margin: 10px;
+	border: none;
+	height: 256px;
+	width: 256px;
+	padding: 0px;
+	float: left;
+}
+
+.row {
+	border:none;
+	padding: 0px;
+	margin: 0px;
+}
+
+.cell {
+	border: none; /*solid 1px black;*/
+	padding: 0px;
+	margin: 0px;
+	float: left;
+}
+
+#rightPanel {
+	margin: 10px;
+	border: none;
+	height: 256px;
+	width: 290px;
+	padding: 0px;
+	float: right;
+}
+
+#arrows {
+	border: none;
+	float: left;
+	margin: 0px;
+	width: 250px;
+	height: auto;
+	padding: 0px;
+	clear: both;
+}
+
+#up_arrow {
+	float: left;
+	clear: both;
+	margin-right: 200px;
+	margin-left: 26px;
+	margin-bottom: 5px;
+}
+#down_arrow {
+	float: left;
+	clear: both;
+	margin-left: 26px;
+	margin-top: 5px;
+}
+#right_arrow {
+	float: left;
+}
+#left_arrow {
+	float: left;
+	margin-right: 20px;
+}
+
+#story {
+	border: none;
+	float: left;
+	margin: 0px;
+	margin-top: 10px;
+	width: auto;
+	height: 140px;
+	padding: 0px;
+	clear: both;
+}
+
+#hero {
+	position: absolute;
+	top: 100px;
+	left: 100px;
+}
