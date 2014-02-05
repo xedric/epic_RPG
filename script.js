@@ -7,8 +7,12 @@ $(document).ready(function() {
 		});
 	});
 
-	var heroX = 3;
-	var heroY = 3;
+	var heroX = 0;
+	var heroY = 0;
+	var MAX_HERO_X = 7;
+	var MAX_HERO_Y = 7;
+	var MIN_HERO_X = 0;
+	var MIN_HERO_Y = 0;
 
 	var IMAGE_DIRECTORY = "images";
 	var GRASS = "grass.jpg";
@@ -34,6 +38,7 @@ $(document).ready(function() {
 						CASTLE1, CASTLE2];
 
 	var MAP_SIZE = 8;
+	var TILE_SIDE = 32;
 	
 	// story text max 270 characters
 
@@ -46,15 +51,27 @@ $(document).ready(function() {
 	};
 
 	$("#up_arrow").click(function() {
-		$("#hero").animate({top:"-=32"}, 500);
+		if(heroY != MIN_HERO_Y) {
+			$("#hero").animate({top:"-="+TILE_SIDE}, 500);
+			heroY--;
+		}
 	});
 	$("#down_arrow").click(function() {
-		$("#hero").animate({top:"+=32"}, 500);
+		if(heroY != MAX_HERO_Y) {
+			$("#hero").animate({top:"+="+TILE_SIDE}, 500);
+			heroY++;
+		}
 	});
 	$("#left_arrow").click(function() {
-		$("#hero").animate({left:"-=32"}, 500);
+		if(heroX != MIN_HERO_X) {
+			$("#hero").animate({left:"-="+TILE_SIDE}, 500);
+			heroX--;
+		}
 	});
 	$("#right_arrow").click(function() {
-		$("#hero").animate({left:"+=32"}, 500);
+		if(heroX != MAX_HERO_X) {
+			$("#hero").animate({left:"+="+TILE_SIDE}, 500);
+			heroX++;
+		}
 	});
 });
