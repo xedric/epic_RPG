@@ -15,6 +15,12 @@ $(document).ready(function() {
 	var MIN_HERO_Y = 0;
 
 	var IMAGE_DIRECTORY = "images";
+	
+	var MAP_SIZE = 8;
+	var TILE_SIDE = 32;
+	
+	// story text max 270 characters
+
 	var GRASS = "grass.jpg";
 	var GRASS2 = "grass2.jpg";
 	var FOREST = "forest.jpg";
@@ -37,15 +43,26 @@ $(document).ready(function() {
 						LAKE_S, LAKE_M, LAKE_L, 
 						CASTLE1, CASTLE2];
 
-	var MAP_SIZE = 8;
-	var TILE_SIDE = 32;
-	
-	// story text max 270 characters
+	var oneCastle1 		= 0;
+	var oneCastle2 		= 0;
+	var oneSnowMountain = 0;
+	var oneLakeS		= 0;
+	var oneLakeM		= 0;
+	var oneLakeL		= 0;
+
+	var map = [];
+	for (var i = 0; i < MAP_SIZE; i++) {
+		map.push(new Array(MAP_SIZE));
+		for (var j = 0; j < MAP_SIZE; j++) {
+			var r = Math.floor(Math.random()*(TERRAIN_ARRAY.length - 1));
+			map[i][j] = TERRAIN_ARRAY[r];
+		};
+	};
 
 	for (var i = 0; i < MAP_SIZE; i++) {
 		$("#map").append("<div class=\"row\">")
 		for (var j = 0; j < MAP_SIZE; j++) {
-			$("#map").append("<img src=\""+IMAGE_DIRECTORY+"/grass.jpg\" class=\"cell\">");
+			$("#map").append("<img src=\""+IMAGE_DIRECTORY+"/"+map[i][j]+"\" class=\"cell\">");
 		};
 		$("#map").append("</div>");
 	};
